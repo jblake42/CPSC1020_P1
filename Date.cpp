@@ -1,12 +1,5 @@
 #include "Date.h"
-#include "string.h"
-
-Date::Date(int d, int m, int y)
-{
-    day = d;
-    month = m;
-    year = y;
-}
+#include <string>
 
 bool Date::setDay(int d)
 {
@@ -51,7 +44,7 @@ int Date::getYear()
 }
 string Date::showDate()
 {
-    // look into this 
+    //return "hello world";
 }
 
 

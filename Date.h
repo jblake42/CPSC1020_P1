@@ -1,7 +1,7 @@
 #ifndef DATE_H
 #define DATE_H
 #include <iostream>
-#include <string.h>
+#include <string>
 using namespace std;
  
  class Date{
@@ -12,7 +12,7 @@ using namespace std;
      public:
         //default constructors 
         Date() = default; 
-        Date(int d, int m, int y); 
+        Date(int d, int m, int y) : month{m}, day{d} ,year{y} {}
         bool setDay(int d);
         bool setMonth(int m);
         bool setYear(int y);

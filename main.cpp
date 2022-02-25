@@ -1,27 +1,40 @@
 #include <iomanip>
 #include <iostream>
 #include "Date.h"
+#include "Date.cpp"
+#include <string>
 
 using namespace std; 
 int main()
 {  
     //declaring needed variables
-    int quarantineLength; 
+    //int quarantineLength; 
     int userDay, userMonth, userYear;
-    int vaccineDay, vaccineMonth, vaccine Year;
-    char testStatus; 
-    char exposeStatus, vaccineStatus; 
+    //int vaccineDay, vaccineMonth, vaccineYear;
+
+    //Date dateExposed, dateSecondDose;
+    string testStatus; 
+    string exposeStatus, vaccineStatus; 
     //getting user data
-    cout << "Test Result: \n";
+    cout << "Test Result: ";
     cin >> testStatus;
-    //if(testStatus == "postive")
+
+    if(testStatus == "postive")
+    {
+        Date datePositive;
+        cout << "Month tested positive: ";
+        cin >> userMonth;
+        datePositive.setMonth(userMonth);
+        cout << "Day tested positive: ";
+        cin >> userDay;
+        datePositive.setDay(userDay);
+        cout << "Year tested positive: ";
+        cin >> userYear;
+        datePositive.setYear(userYear);
+        cout << "5 day quarantine" << endl;
+        cout << datePositive.getMonth() << datePositive.getDay() << datePositive.getYear();
+    }
      /*
-     {
-        // ask date they tested postive
-        // add 5 days for qurantine
-        //qurantine for 5 days
-        
-     }
      else
      {
         cout << "Exposed to positive case: ";
